@@ -1,0 +1,18 @@
+AI Network Anomaly Detection - Model Evaluation
+================================================
+
+Model type: XGBoost
+
+Accuracy:  0.9800
+Precision: 0.9848
+Recall:    0.9196
+F1-score:  0.9511
+
+              precision    recall  f1-score   support
+
+      normal       0.98      1.00      0.99      1577
+     anomaly       0.98      0.92      0.95       423
+
+    accuracy                           0.98      2000
+   macro avg       0.98      0.96      0.97      2000
+weighted avg       0.98      0.98      0.98      2000

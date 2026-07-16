@@ -1,0 +1,6 @@
+{
+  "total_records": 10000,
+  "normal_count": 7885,
+  "anomaly_count": 2115,
+  "attack_percentage": 21.15
+}
