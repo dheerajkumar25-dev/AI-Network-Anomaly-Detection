@@ -1,0 +1,18 @@
+[
+  {
+    "version": "20260716_044150",
+    "model_type": "RandomForest (fallback - run 'pip install xgboost' to use XGBoost)",
+    "accuracy": 0.98,
+    "precision": 0.9848,
+    "recall": 0.9196,
+    "f1_score": 0.9511
+  },
+  {
+    "version": "20260716_110758",
+    "model_type": "XGBoost",
+    "accuracy": 0.98,
+    "precision": 0.9848,
+    "recall": 0.9196,
+    "f1_score": 0.9511
+  }
+]
