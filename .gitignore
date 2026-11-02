@@ -16,9 +16,6 @@ data/raw/*.txt
 data/processed/*.csv
 
 # Generated model artifacts
-models/model.pkl
-models/scaler.pkl
-models/encoders.pkl
 models/versions/
 
 # Generated plots
