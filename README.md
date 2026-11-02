@@ -2,7 +2,13 @@
 
 An AI-powered network intrusion detection system that classifies network traffic as **Normal** or **Anomalous** using machine learning.
 
-The project implements a complete ML pipeline, including data preprocessing, feature engineering, model training, evaluation, explainability using SHAP, and an interactive Streamlit dashboard for real-time predictions.
+The project implements a complete ML pipeline, including data preprocessing, feature engineering, model training, evaluation, explainability using SHAP, and an interactive Streamlit dashboard for network traffic predictions.
+
+## 🚀 Live Demo
+
+**Try the application:** [AI Network Anomaly Detection](https://ai-network-anomaly-dheeraj.streamlit.app/)
+
+**GitHub Repository:** [AI Network Anomaly Detection](https://github.com/dheerajkumar25-dev/AI-Network-Anomaly-Detection)
 
 ## 📸 Application Screenshots
 
@@ -40,7 +46,7 @@ The project implements a complete ML pipeline, including data preprocessing, fea
 | Explainability | SHAP |
 | Visualization | Plotly, Matplotlib |
 | Frontend | Streamlit |
-| Deployment | Docker, Streamlit |
+| Deployment | Docker, Streamlit Community Cloud |
 
 ## 🧪 Testing
 
@@ -81,7 +87,7 @@ The project separates preprocessing, training, prediction, and visualization int
 - Data preprocessing is reusable during both training and inference.
 - Encoders and scalers are saved to ensure consistent predictions.
 - SHAP is integrated to improve model interpretability.
-- Model versioning tracks every trained model automatically.
+- Model versioning tracks trained models.
 - Streamlit provides an intuitive interface for real-time inference.
 
 ## 📂 Dataset
@@ -123,7 +129,7 @@ AI-Network-Anomaly-Detection/
 │   ├── versions/               # Versioned trained models
 │   ├── model.pkl               # Latest trained XGBoost model
 │   ├── scaler.pkl              # Saved feature scaler
-│   ├── encoders.pkl            # Saved categorical encoders
+│   ├── encoders.pkl             # Saved categorical encoders
 │   └── version_history.json    # Model version history
 │
 ├── notebooks/
@@ -244,7 +250,6 @@ Example performance obtained during training:
 - Compare multiple machine learning models.
 - Integrate deep learning-based anomaly detection.
 - Add real-time packet capture support.
-- Deploy the application on cloud platforms.
 - Expose REST API endpoints for external integrations.
 - Add automated unit tests for preprocessing and prediction modules.
 
