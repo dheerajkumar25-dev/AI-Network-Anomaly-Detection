@@ -18,13 +18,11 @@ The project implements a complete ML pipeline, including data preprocessing, fea
 
 ### 2. Traffic Prediction Input
 
-
-
-![Prediction Results and SHAP Explanation](docs/images/prediction-explanation.png)
+![Traffic Prediction Input Form](docs/images/prediction-input.png)
 
 ### 3. Prediction Results & Model Explainability
 
-![Traffic Prediction Input Form](docs/images/prediction-input.png)
+![Prediction Results and SHAP Explanation](docs/images/prediction-explanation.png)
 
 ## 🚀 Features
 
