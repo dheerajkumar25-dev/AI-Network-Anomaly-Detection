@@ -16,11 +16,13 @@ The project implements a complete ML pipeline, including data preprocessing, fea
 
 ![AI Network Anomaly Detection Dashboard](docs/images/dashboard.png)
 
-### 2. Prediction Results & Model Explainability
+### 2. Traffic Prediction Input
+
+
 
 ![Prediction Results and SHAP Explanation](docs/images/prediction-explanation.png)
 
-### 3. Traffic Prediction Input
+### 3. Prediction Results & Model Explainability
 
 ![Traffic Prediction Input Form](docs/images/prediction-input.png)
 
