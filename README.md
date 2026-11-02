@@ -1,38 +1,48 @@
-# AI Network Anomaly Detection
+# 🛡️ AI Network Anomaly Detection
 
-An AI-powered network intrusion detection system that classifies network traffic as **Normal** or **Anomalous** using machine learning. The project implements a complete ML pipeline including data preprocessing, feature engineering, model training, evaluation, explainability with SHAP, and an interactive Streamlit dashboard for real-time predictions.
+An AI-powered network intrusion detection system that classifies network traffic as **Normal** or **Anomalous** using machine learning.
 
----
+The project implements a complete ML pipeline, including data preprocessing, feature engineering, model training, evaluation, explainability using SHAP, and an interactive Streamlit dashboard for real-time predictions.
 
-## Features
+## 📸 Application Screenshots
 
-- 🌐 Detect anomalous network traffic using Machine Learning
-- 🤖 XGBoost-based intrusion detection model
-- 📊 Interactive Streamlit dashboard
-- 📈 Model evaluation using Accuracy, Precision, Recall, and F1-score
-- 🔍 SHAP-based model explainability
-- 📂 Batch prediction using CSV files
-- ⚡ Real-time single record prediction
-- 📦 Model versioning for experiment tracking
-- 🐳 Docker support
+### 1. Main Dashboard
 
----
+![AI Network Anomaly Detection Dashboard](docs/images/dashboard.png)
 
-## Tech Stack
+### 2. Prediction Results & Model Explainability
+
+![Prediction Results and SHAP Explanation](docs/images/prediction-explanation.png)
+
+### 3. Traffic Prediction Input
+
+![Traffic Prediction Input Form](docs/images/prediction-input.png)
+
+## 🚀 Features
+
+- 🌐 Detect anomalous network traffic using Machine Learning.
+- 🤖 XGBoost-based intrusion detection model.
+- 📊 Interactive Streamlit dashboard.
+- 📈 Model evaluation using Accuracy, Precision, Recall, and F1-score.
+- 🔍 SHAP-based model explainability.
+- 📂 Batch prediction using CSV files.
+- ⚡ Real-time single-record prediction.
+- 📦 Model versioning for experiment tracking.
+- 🐳 Docker support.
+
+## 🛠️ Tech Stack
 
 | Category | Technologies |
-|----------|--------------|
+|---|---|
 | Language | Python |
 | Machine Learning | XGBoost, Scikit-learn |
 | Data Processing | Pandas, NumPy |
 | Explainability | SHAP |
 | Visualization | Plotly, Matplotlib |
 | Frontend | Streamlit |
-| Deployment | Docker |
+| Deployment | Docker, Streamlit |
 
----
-
-## Testing
+## 🧪 Testing
 
 This project has been tested locally on **Windows (Python 3.12)**.
 
@@ -49,13 +59,11 @@ This project has been tested locally on **Windows (Python 3.12)**.
 - ✅ Batch prediction
 - ✅ Model versioning
 
----
-
-## Project Pipeline
+## 🔄 Project Pipeline
 
 ### Workflow
 
-1. Load the NSL-KDD dataset (or a compatible dataset).
+1. Load the NSL-KDD dataset or a compatible dataset.
 2. Clean and preprocess the data.
 3. Encode categorical features.
 4. Scale numerical features.
@@ -66,9 +74,7 @@ This project has been tested locally on **Windows (Python 3.12)**.
 9. Perform real-time single or batch predictions.
 10. Display results through the Streamlit dashboard.
 
----
-
-## Design Decisions
+## 🏗️ Design Decisions
 
 The project separates preprocessing, training, prediction, and visualization into independent modules for better maintainability and scalability.
 
@@ -78,24 +84,22 @@ The project separates preprocessing, training, prediction, and visualization int
 - Model versioning tracks every trained model automatically.
 - Streamlit provides an intuitive interface for real-time inference.
 
----
-
-## Dataset
+## 📂 Dataset
 
 The project follows the feature schema of the **NSL-KDD intrusion detection dataset**.
 
 When the original dataset is unavailable, the preprocessing pipeline automatically generates a synthetic dataset with the same feature structure for demonstration and development purposes.
 
-To use the original dataset:
+### Using the Original Dataset
 
-1. Download **KDDTrain+.txt** from the NSL-KDD dataset.
+1. Download `KDDTrain+.txt` from the NSL-KDD dataset.
 2. Place it inside:
 
 ```text
 data/raw/
 ```
 
-3. Run:
+3. Run the preprocessing script:
 
 ```powershell
 python src/preprocess.py
@@ -103,51 +107,53 @@ python src/preprocess.py
 
 The preprocessing script automatically detects and processes the original dataset if available.
 
----
-
-## Project Structure
+## 📁 Project Structure
 
 ```text
 AI-Network-Anomaly-Detection/
 │
 ├── app/
-│   └── app.py                     # Streamlit dashboard for real-time predictions
+│   └── app.py                  # Streamlit dashboard
 │
 ├── data/
-│   ├── raw/                       # Original NSL-KDD dataset
-│   └── processed/                 # Preprocessed dataset (auto-generated)
+│   ├── raw/                    # Original NSL-KDD dataset
+│   └── processed/              # Preprocessed dataset
 │
 ├── models/
-│   ├── versions/                  # Versioned trained models
-│   ├── model.pkl                  # Latest trained XGBoost model
-│   ├── scaler.pkl                 # Saved feature scaler
-│   ├── encoders.pkl               # Saved categorical encoders
-│   └── version_history.json       # Model version history and evaluation metrics
+│   ├── versions/               # Versioned trained models
+│   ├── model.pkl               # Latest trained XGBoost model
+│   ├── scaler.pkl              # Saved feature scaler
+│   ├── encoders.pkl            # Saved categorical encoders
+│   └── version_history.json    # Model version history
 │
 ├── notebooks/
-│   └── EDA.ipynb                  # Exploratory Data Analysis
+│   └── EDA.ipynb               # Exploratory Data Analysis
 │
 ├── reports/
-│   ├── images/                    # Confusion matrix & feature importance plots
-│   ├── metrics.txt                # Accuracy, Precision, Recall & F1-score
-│   └── dataset_summary.json       # Dataset statistics for dashboard cards
+│   ├── images/                 # Evaluation plots
+│   ├── metrics.txt             # Model evaluation metrics
+│   └── dataset_summary.json    # Dataset statistics
 │
 ├── src/
-│   ├── utils.py                   # Shared utility functions and configuration
-│   ├── preprocess.py              # Data preprocessing and feature engineering
-│   ├── train.py                   # Model training, evaluation, and versioning
-│   └── predict.py                 # Single & batch prediction with SHAP explanations
+│   ├── utils.py                # Shared utility functions
+│   ├── preprocess.py           # Data preprocessing
+│   ├── train.py                # Model training and evaluation
+│   └── predict.py              # Single and batch prediction
 │
-├── requirements.txt               # Python dependencies
-├── Dockerfile                     # Docker configuration
-└── README.md                      # Project documentation
+├── docs/
+│   └── images/
+│       ├── dashboard.png
+│       ├── prediction-explanation.png
+│       └── prediction-input.png
+│
+├── requirements.txt
+├── Dockerfile
+└── README.md
 ```
 
----
+## ⚙️ Getting Started
 
-## Getting Started
-
-### Clone Repository
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/dheerajkumar25-dev/AI-Network-Anomaly-Detection.git
@@ -155,39 +161,43 @@ git clone https://github.com/dheerajkumar25-dev/AI-Network-Anomaly-Detection.git
 cd AI-Network-Anomaly-Detection
 ```
 
-### Create Virtual Environment
+### 2. Create Virtual Environment
 
 ```powershell
 python -m venv venv
+```
 
+### 3. Activate Virtual Environment
+
+```powershell
 .\venv\Scripts\Activate.ps1
 ```
 
-### Install Dependencies
+### 4. Install Dependencies
 
 ```powershell
 pip install -r requirements.txt
 ```
 
-### Preprocess Dataset
+### 5. Preprocess Dataset
 
 ```powershell
 python src/preprocess.py
 ```
 
-### Train Model
+### 6. Train Model
 
 ```powershell
 python src/train.py
 ```
 
-### Run Prediction Script
+### 7. Run Prediction Script
 
 ```powershell
 python src/predict.py
 ```
 
-### Launch Dashboard
+### 8. Launch Dashboard
 
 ```powershell
 streamlit run app/app.py
@@ -199,38 +209,36 @@ The application will launch at:
 http://localhost:8501
 ```
 
----
+## 🐳 Docker
 
-## Docker
-
-Build the Docker image:
+### Build Docker Image
 
 ```powershell
 docker build -t network-anomaly-detector .
 ```
 
-Run the container:
+### Run Docker Container
 
 ```powershell
 docker run -p 8501:8501 network-anomaly-detector
 ```
 
----
+Open `http://localhost:8501` to access the application.
 
-## Model Performance
+## 📊 Model Performance
 
 Example performance obtained during training:
 
 | Metric | Score |
-|--------|------:|
+|---|---:|
 | Accuracy | 98.00% |
 | Precision | 98.48% |
 | Recall | 91.96% |
 | F1-Score | 95.11% |
 
----
+*These are example training results, not a guarantee of performance on other datasets.*
 
-## Future Improvements
+## 🔮 Future Improvements
 
 - Support additional intrusion detection datasets.
 - Compare multiple machine learning models.
@@ -240,8 +248,15 @@ Example performance obtained during training:
 - Expose REST API endpoints for external integrations.
 - Add automated unit tests for preprocessing and prediction modules.
 
----
+## 👨‍💻 Author
 
-## License
+**Dheeraj Kumar**
+
+B.Tech — Electronics and Communication Engineering  
+IIIT Bhagalpur
+
+GitHub: [dheerajkumar25-dev](https://github.com/dheerajkumar25-dev)
+
+## 📄 License
 
 This project is intended for educational and portfolio purposes.
